@@ -56,8 +56,12 @@ To use this script:
  - Configure git
  - git clone https://github.com/sbhark/aegisattackanalysis.git
 
-8) Call the script from fail2ban 
- - python /directory/where/script/is/stored/AegisDefense.py 
+8) Call the script from fail2ban
+ - open this file from your favourite text editor: /etc/fail2ban/action.d/iptables.conf 
+ - insert the following line into where actionban is: python /directory/where/script/is/stored/AegisDefense.py <ip> <protocol> <port> <failures> <time>
+ - example: 
+ ..- actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
+            python /root/script/AegisDefense.py <ip> <protocol> <port> <failures> <time> 
 
 9) That's it! But if the above is too much for you I created an installation script of all the necessary packages in the installation folder :)
 
