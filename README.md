@@ -31,38 +31,42 @@ How Tos
 To use this script: 
 
 1) Make sure you have Python installed (most Linux OS do)
+ - apt-get install python
 
-2) Install MongoDB 
+2) Make sure you have sudo installed 
+ - apt-get install sudo
+
+3) Install MongoDB 
  - sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10
  - Add to /etc/apt/sources.list: deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen
  - sudo apt-get update 
  - sudo apt-get install mongodb-10gen 
  - More details here: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/
 
-3) Install python-dev and build-essentials
+4) Install python-dev and build-essentials
  - sudo apt-get install python-dev build-essentials 
 
-4) Install python-pip
+5) Install python-pip
  - sudo apt-get install python-pip
 
-5) Install PyMongo (Python driver for MongoDB)
+6) Install PyMongo (Python driver for MongoDB)
  - sudo pip install pymongo
 
-6) Install requests 
+7) Install requests 
  - sudo pip install requests
 
-7) Install GIT to pull down the source
+8) Install GIT to pull down the source
  - sudo apt-get install git-core
  - Configure git
  - git clone https://github.com/sbhark/aegisattackanalysis.git
 
-8) Call the script from fail2ban
+9) Call the script from fail2ban
  - open this file from your favourite text editor: /etc/fail2ban/action.d/iptables.conf 
  - insert the following line into where actionban is: python /directory/where/script/is/stored/AegisDefense.py <ip> <protocol> <port> <failures> <time>
  - example: actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
             python /root/script/AegisDefense.py <ip> <protocol> <port> <failures> <time> 
 
-9) That's it! But if the above is too much for you I created an installation script of all the necessary packages in the installation folder :)
+10) That's it! But if the above is too much for you I created an installation script of all the necessary packages in the installation folder :)
 
 Whenever there is an IP that is blacklisted fail2ban will call this script and the script in turn will write the IP to the database along with some additional informaiton. 
 
