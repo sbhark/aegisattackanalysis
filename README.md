@@ -76,12 +76,15 @@ Set up Cron for Daily Report:
 
 4) That's it! A report will be sent out every day at midnight.
 
-#Future Release 
+Note: For future Release 
 To use the included web-app: 
 1) Make sure you have python installed (most Linux OS do) 
+
 2) Make sure you have a web server installed, apache2 / nginx doesn't matter 
+
 3) Install python-pip 
  -  sudo apt-get isntall python-pip -y 
+
 4) Install Django 
  - sudo pip install Django
 
