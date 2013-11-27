@@ -14,6 +14,9 @@ sudo apt-get update;
 
 sudo apt-get install mongodb-10gen;
 
+printf "\nInstalling python-dev / build-essential";
+sudo apt-get install build-essential python-dev;
+
 printf "\nInstalling python-pip";
 sudo apt-get install python-pip -y;
 
@@ -24,7 +27,7 @@ printf "\nInstalling requests";
 sudo pip install requests; 
 
 printf "\nInstalling GIT";
-sudo apt-get install git-core
+sudo apt-get install git-core -y;
 
 printf "\nPlease configure GIT";
 
