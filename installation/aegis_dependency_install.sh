@@ -2,7 +2,10 @@
 
 printf "Install script for dependencies for aegisiattackanalysis"
 
-printf "\nPerforming apt-get update";
+printf "\nInstalling sudo";
+apt-get install sudo;
+
+printf "\nPerforming apt-get update"; 
 sudo apt-get update;
 
 printf "\nInstalling MongoDB";
