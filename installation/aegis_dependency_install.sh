@@ -15,7 +15,7 @@ sudo apt-get update;
 sudo apt-get install mongodb-10gen;
 
 printf "\nInstalling python-dev / build-essential";
-sudo apt-get install build-essential python-dev;
+sudo apt-get install build-essential python-dev -y;
 
 printf "\nInstalling python-pip";
 sudo apt-get install python-pip -y;
