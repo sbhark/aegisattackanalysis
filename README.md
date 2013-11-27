@@ -66,7 +66,7 @@ To use this script:
  - open file /etc/fail2ban/action.d/(what it said in the above line).conf
  - insert the following line into where actionban is: python /directory/where/script/is/stored/AegisDefense.py <ip> <protocol> <port> <failures> <time>
  - example: actionban = iptables -I fail2ban-<name> 1 -s <ip> -j DROP
-            python /root/script/AegisDefense.py <ip> <protocol> <port> <failures> <time> 
+            python /root/script/AegisDefense.py '<ip>' '<protocol>' '<port>' '<failures>' '<time>' 
 
 10) That's it! But if the above is too much for you I created an installation script of all the necessary packages in the installation folder :)
 
