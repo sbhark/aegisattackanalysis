@@ -1,0 +1,31 @@
+#!/bin/bash 
+
+printf "Install script for dependencies for aegisiattackanalysis"
+
+printf "\nPerforming apt-get update";
+sudo apt-get update;
+
+printf "\nInstalling MongoDB";
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv 7F0CEB10;
+
+echo "deb http://downloads-distro.mongodb.org/repo/debian-sysvinit dist 10gen" >> /etc/apt/sources.list;
+
+sudo apt-get update;
+
+sudo apt-get install mongodb-10gen;
+
+printf "\nInstalling python-pip";
+sudo apt-get install python-pip -y;
+
+printf "\nInstalling PyMongo";
+sudo pip install pymongo;
+
+printf "\nInstalling requests";
+sudo pip install requests; 
+
+printf "\nInstalling GIT";
+sudo apt-get install git-core
+
+printf "\nPlease configure GIT";
+
+printf "\naegisattackanalysis package dependencies installation complete! ";
