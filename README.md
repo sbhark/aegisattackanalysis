@@ -39,28 +39,32 @@ To use this script:
  - sudo apt-get install mongodb-10gen 
  - More details here: http://docs.mongodb.org/manual/tutorial/install-mongodb-on-debian/
 
-3) Install python-pip
+3) Install python-dev and build-essentials
+ - sudo apt-get install python-dev build-essentials 
+
+4) Install python-pip
  - sudo apt-get install python-pip
 
-4) Install PyMongo (Python driver for MongoDB)
+5) Install PyMongo (Python driver for MongoDB)
  - sudo pip install pymongo
 
-5) Install requests 
+6) Install requests 
  - sudo pip install requests
 
-6) Install GIT to pull down the source
+7) Install GIT to pull down the source
  - sudo apt-get install git-core
  - Configure git
  - git clone https://github.com/sbhark/aegisattackanalysis.git
 
-7) Call the script from fail2ban 
+8) Call the script from fail2ban 
  - python /directory/where/script/is/stored/AegisDefense.py 
 
-8) That's it! But if the above is too much for you I created an installation script of all the necessary packages in the installation folder :)
+9) That's it! But if the above is too much for you I created an installation script of all the necessary packages in the installation folder :)
 
 Whenever there is an IP that is blacklisted fail2ban will call this script and the script in turn will write the IP to the database along with some additional informaiton. 
 
 Set up Cron for Daily Report:
+
 1) I assume you are familiar with setting up cron on Linux if not read this: http://v1.corenominal.org/howto-setup-a-crontab-file/
 
 2) You need Mandrill to have a Mandrill API Key if you don't have one they are free to sign up with: http://mandrill.com/
