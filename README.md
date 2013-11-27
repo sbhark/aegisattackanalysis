@@ -78,12 +78,17 @@ Set up Cron for Daily Report:
 
 2) You need Mandrill to have a Mandrill API Key if you don't have one they are free to sign up with: http://mandrill.com/
 
-2) Insert the following cronjob: 
+3) Insert the following cronjob: 
  - 00 00 * * * python /path/to/AegisDefenseCron.py 
 
-3) Open AegisDefenseCron.py in a texteditor and edit the variable madrill_api_key to your api key. 
+4) Open AegisDefenseCron.py in a texteditor and edit the following variables. 
+  - recipient_email 
+  - recipient_name 
+  - sender_email
+  - from_name 
+  - api_key 
 
-4) That's it! A report will be sent out every day at midnight.
+5) That's it! A report will be sent out every day at midnight.
 
 Note: For future Release
  
