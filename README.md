@@ -20,7 +20,7 @@ Some things to note while I developed this:
 
 3) I haven't tested this yet on a production level system so 1) use this at your own risk 2) if you do use it on a production system and it turns out good feel free to send me an email! :)
 
-4) The script uses Mandrill to send out daily email reports. If you don't like Mandrill then feel free to change the code to use your preference for sending out emails. I will be adding support for sending out emails with different APIs and your custom mail servers. 
+4) You can setup a cron so another script will send out daily report emails. The script uses Mandrill to send out the daily email reports. If you don't like Mandrill then feel free to change the code to use your preference for sending out emails. I will be adding support for sending out emails with different APIs and your custom mail servers. 
 
 6) MongoDB! It should be installed on the same machine where the script is running I will add support for using remote mongodb instances. 
 
