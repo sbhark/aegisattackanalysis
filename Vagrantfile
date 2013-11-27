@@ -16,4 +16,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # doesn't already exist on the user's system.
   config.vm.box_url = "http://files.vagrantup.com/precise32.box"
 
+  config.vm.network :forwarded_port, guest: 22, host: 2201
+
+  config.vm.provider :virtualbox do |vb| 
+    vb.customize ["modifyvm", :id, "--memory", 1024]
+  end
 end
