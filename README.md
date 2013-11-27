@@ -5,7 +5,7 @@ A Python script which is called from fail2ban to store attack IP Addresses into 
 
 Features 
 ===================
-Stores IP Addresses flagged by fail2ban and stores the IP information in a database. 
+Stores IP Addresses flagged by fail2ban in a database. 
 A basic web application will use the flagged IP database to display information such as number of attacks per IP, 
 geo-location of IP, graph of daily total flagged IPs and the most offending IP. 
 A daily report can also be sent out for the IPs that have been blacklisted during the day.
