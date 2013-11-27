@@ -76,8 +76,10 @@ Set up Cron for Daily Report:
 
 4) That's it! A report will be sent out every day at midnight.
 
-Note: For future Release 
+Note: For future Release
+ 
 To use the included web-app: 
+
 1) Make sure you have python installed (most Linux OS do) 
 
 2) Make sure you have a web server installed, apache2 / nginx doesn't matter 
